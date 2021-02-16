@@ -73,6 +73,7 @@ const fourQ = document.getElementById('four');
 const submitButton = document.getElementById('submit-button');
 
 let currentQuiz = 0;
+let score = 0;
 loadQuiz();
   
 
@@ -84,19 +85,43 @@ function loadQuiz(){
     twoQ.innerText = currentQuizData.b;
     threeQ.innerText = currentQuizData.c;
     fourQ.innerText = currentQuizData.d;
-    currentQuiz++;
+ 
     
 }
 
+function getSelected(){
+    const answers = document.querySelectorAll('.answer')
+    let  valeOfAnswer = undefined;
+    console.log(answers);
+    answers.forEach((answer) => {
+        
+        if(answer.checked){
+            valeOfAnswer = answer.id;
+        }
+    });
 
-// submitButton.addEventListener('click', () =>{
-//   
-// if (currentQuiz < quizData.length){
-//     loadQuiz();
-// }
-// else{
-//     alert('your total marks')
-// }
+    return valeOfAnswer;
+}
 
-   
-// })
+
+submitButton.addEventListener('click', () =>{
+    
+   const valeOfAnswer = getSelected();
+   console.log(valeOfAnswer);
+
+if(valeOfAnswer){
+    if(valeOfAnswer === quizData[currentQuiz].correct){
+        score++;
+    }
+    currentQuiz++;
+    if (currentQuiz < quizData.length){
+        loadQuiz();
+    }
+    else{
+        alert('your total marks')
+    }
+}
+
+});
+
+
