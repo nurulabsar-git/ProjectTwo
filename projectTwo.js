@@ -1,6 +1,6 @@
 const quizData = [
     {
-        question: 'How old is Florin?';
+        question: 'How old is Florin?',
         a: '10',
         b: '20',
         c: '30',
@@ -65,10 +65,11 @@ const quizData = [
 ]
 
 const Question = document.getElementById('question');
-const one = document.getElementById('one');
-const two = document.getElementById('two');
-const three = document.getElementById('three');
-const four = document.getElementById('four');
+const oneQ = document.getElementById('one');
+// console.log(oneQ);
+const twoQ = document.getElementById('two');
+const threeQ = document.getElementById('three');
+const fourQ = document.getElementById('four');
 const submitButton = document.getElementById('submit-button');
 
 let currentQuiz = 0;
@@ -77,24 +78,25 @@ loadQuiz();
 
 function loadQuiz(){
     const currentQuizData =  quizData[currentQuiz];
-    Question.innerText = currentQuizData.question
+   Question.innerText = currentQuizData.question;
 
-    one.innerText = currentQuizData.a;
-    two.innerText = currentQuizData.b;
-    three.innerText = currentQuizData.c;
-    four.innerText = currentQuizData.d;
+    oneQ.innerText = currentQuizData.a;
+    twoQ.innerText = currentQuizData.b;
+    threeQ.innerText = currentQuizData.c;
+    fourQ.innerText = currentQuizData.d;
+    currentQuiz++;
     
 }
 
 
-submitButton.addEventListener('click', () =>{
-    currentQuiz++;
-if (currentQuiz < quizData.length){
-    loadQuiz();
-}
-else{
-    alert('your total marks')
-}
+// submitButton.addEventListener('click', () =>{
+//   
+// if (currentQuiz < quizData.length){
+//     loadQuiz();
+// }
+// else{
+//     alert('your total marks')
+// }
 
    
-})
+// })
