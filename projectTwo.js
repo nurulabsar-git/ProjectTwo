@@ -5,7 +5,7 @@ const quizData = [
         b: 'fun =(x)=>{return x*y}',
         c: 'fun =(x, y=5)={return x*y}',
         d: 'I have no idea about default parameter!',
-        correct: 'c',
+        correct: 'a',
     }, {
         question: 'async and await in means..?',
         a: 'async function return promise then after await function take this promise',
@@ -18,10 +18,10 @@ const quizData = [
  
      question: 'What is the meaning of map in java script?',
      a: 'together all array value.',
-     b: 'it is update cof for loop',
+     b: 'it is update of for loop',
      c: 'both of a and b.',
      d: 'No idea',
-     correct: 'b',
+     correct: 'c',
 
     }, {
 
