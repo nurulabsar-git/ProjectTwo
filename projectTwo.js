@@ -91,7 +91,10 @@ function loadQuiz(){
  
     
 }
-                                      
+                                    
+function getSelected(){                
+    let  valeOfAnswer = undefined; 
+    console.log(answers);
     answers.forEach((answer) => {
         
         if(answer.checked){
