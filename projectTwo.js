@@ -91,10 +91,7 @@ function loadQuiz(){
  
     
 }
-                                       // answers = answerEls
-function getSelected(){                //answer = answerEl
-    let  valeOfAnswer = undefined;     // here valueOfAnswer = answer
-    console.log(answers);
+                                      
     answers.forEach((answer) => {
         
         if(answer.checked){
