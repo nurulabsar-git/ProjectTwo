@@ -1,18 +1,18 @@
 const quizData = [
     {
-        question: 'How old is Florin?',
-        a: '10',
-        b: '20',
-        c: '30',
-        d: '40',
+        question: 'Which is the default parameter?',
+        a: 'fun =(x, y=5)=>{return x*y}',
+        b: 'fun =(x)=>{return x*y}',
+        c: 'fun =(x, y=5)={return x*y}',
+        d: 'I have no idea about default parameter!',
         correct: 'c',
     }, {
-        question: 'What is the best programming language?',
-        a: 'javaScript',
-        b: 'java',
-        c: 'python',
-        d: 'C++',
-        correct: 'b',
+        question: 'async and await in means..?',
+        a: 'async function return promise then after await function take this promise',
+        b: 'await only useable inside async function',
+        c: 'async, await, fetch, then, catch and try all are promise in javascript.',
+        d: 'All of above correct.',
+        correct: 'd',
 
     }, {
  
@@ -129,7 +129,8 @@ if(valeOfAnswer){
     // }
     else{
         quizQ.innerHTML =`
-        <h2>Your Total Correct Answer: ${score}/${quizData.length}</h2>`;
+        <h2>Your Total Correct Answer: ${score}/${quizData.length}</h2>
+        <button onclick="location.reload()">Reload</button>`;
     }
 }
 
